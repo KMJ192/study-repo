@@ -140,6 +140,10 @@ docker build -t <docker image name>
 
 1. Run docker-compose on background
 
+```
+docker-compose up -d
+```
+
 <table>
   <tr>
     <td><strong>Option</strong></td>
@@ -162,9 +166,6 @@ docker build -t <docker image name>
     <td>Setting timeout (default 10s)</td>
   </tr>
 </table>
-```
-docker-compose up -d
-```
 
 2. Confirm running container
 
