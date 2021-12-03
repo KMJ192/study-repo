@@ -128,7 +128,7 @@ docker run -it ubuntu
 docker build -t <docker image name>
 ```
 
-[작성방법-공식문서 참조](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
+[Dockerfile 작성방법-공식문서 참조](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 
 ### Docker compose
 
@@ -219,4 +219,4 @@ docker-compose kill
 docker-compose port
 ```
 
-[작성방법-공식문서 참조](https://docs.docker.com/compose/compose-file/)
+[docker-compose.yml 작성방법-공식문서 참조](https://docs.docker.com/compose/compose-file/)
