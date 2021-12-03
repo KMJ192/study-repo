@@ -102,9 +102,13 @@ pm2-dev app.js
 - pm2로 Multi thread를 관리할 수 있다.
 
 ```
-Node.js는 Event-loop라는 single thread를 사용하고, Node.js Application은 CPU의 single core에서만 실행되므로, multi core 시스템은 사용할 수 없다. 이러한 문제를 해결하기위해 Cluster 모듈을 통해 single 프로세스를 multi process(worker)로 늘릴 수 있는 방법을 제공한다. 그렇다면 클러스터 모듈을 사용하여 마스터 프로세스에서 CPU 코어 수 만큼 워커 프로세스를 생성해서 모든 코어를 사용하게끔 개발할 수 있다.
+Node.js는 Event-loop라는 single thread를 사용하고, Node.js Application은 CPU의 single core에서만 실행되므로, multi core 시스템은 사용할 수 없다.
+이러한 문제를 해결하기위해 Cluster 모듈을 통해 single 프로세스를 multi process(worker)로 늘릴 수 있는 방법을 제공한다.
+그렇다면 클러스터 모듈을 사용하여 마스터 프로세스에서 CPU 코어 수 만큼 워커 프로세스를 생성해서 모든 코어를 사용하게끔 개발할 수 있다.
 
- Application 실행 시 처음에는 마스터 프로세스만 생성되는데, 이때 CPU 개수만큼 워커 프로세스를 생성하고 마스터 프로세스와 워커 프로세스가 각각 수행해야 할 일들을 정리하여 구현하면 되는데 이는 매우 번거로운 작업이지만 PM2를 이용하여 간단하게 실행할 수 있다.
+ Application 실행 시 처음에는 마스터 프로세스만 생성되는데,
+ 이때 CPU 개수만큼 워커 프로세스를 생성하고 마스터 프로세스와 워커 프로세스가 각각 수행해야 할 일들을 정리하여
+ 구현하면 되는데 이는 매우 번거로운 작업이지만 PM2를 이용하여 간단하게 실행할 수 있다.
 ```
 
 - pm2의 간단한 명령어로 thread의 숫자를 조절할 수 있다. 아래 명령어는 cpu의 모든 thread를 사용하는 명령어이다. (사용하는 thread를 조절하려면 *max*대신 숫자를 넣어주면 된다.)
