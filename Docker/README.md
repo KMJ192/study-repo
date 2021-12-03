@@ -72,6 +72,6 @@ docker run hello-world
 docker container ls --all
 ```
 
-![Docker containers](/DockerContainerResult.png)
+![Docker containers](DockerContainerResult.png)
 
 ### Dockerfile
