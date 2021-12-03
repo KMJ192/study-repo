@@ -1,4 +1,4 @@
-# Mongodb를 Docker를 이용하여 실행하는 방법
+# Docker를 이용하여 Mongodb를 실행하는 방법
 
 1. Download MongoDB Docker image
 
