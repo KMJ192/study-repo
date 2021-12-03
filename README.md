@@ -3,3 +3,6 @@
 1. Docker
 
 - mongodb
+- Jenkins
+
+2. PM2
