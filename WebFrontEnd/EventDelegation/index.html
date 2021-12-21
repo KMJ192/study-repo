@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="menu">
+      <button data-action="save">저장하기</button>
+      <button data-action="load">불러오기</button>
+      <button data-action="search">검색하기</button>
+    </div>
+    첫번째 cnt = <input type="button" value="1" data-counter /> 두번째 cnt =
+    <input type="button" value="2" data-counter />
+    <script>
+      class Menu {
+        constructor(elem) {
+          this._elem = elem;
+        }
+
+        save() {
+          console.log("저장하기");
+        }
+
+        load() {
+          console.log("불러오기");
+        }
+
+        search() {
+          console.log("검색하기");
+        }
+
+        onClick(event) {
+          let action = event.target.dataset.action;
+          if (action) {
+            this[action]();
+          }
+        }
+      }
+      const menu = document.querySelector("#menu");
+      const test = new Menu(menu);
+      menu.onclick = test.onClick.bind(test);
+
+      document.addEventListener("click", function (event) {
+        if (event.target.dataset.counter !== undefined) {
+          event.target.value++;
+        }
+      });
+    </script>
+  </body>
+</html>
