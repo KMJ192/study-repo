@@ -1,3 +1,5 @@
+pub mod strategy_pattern;
+
 fn main() {
-    println!("Hello, world!");
+	strategy_pattern::strategy_pattern::test();
 }
