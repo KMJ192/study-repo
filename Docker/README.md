@@ -102,12 +102,14 @@ docker images
 
 ```
 docker rmi <REPOSITORY>
+docker rmi <IMG ID>
 ```
 
 - 만약 실행중인 이미지라면 -f 옵션으로 강제 삭제할 수 있다.
 
 ```
 docker rmi -f <REPOSITORY>
+docker rmi -f <IMG ID>
 ```
 
 - ubuntu라는 docker container를 실행시켜본다면 아래의 명령어를 실행한다. (-i, -t 조합은 container에 대한 대화식 shell 접근을 제공함)
