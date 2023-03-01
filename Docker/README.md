@@ -60,6 +60,12 @@ service docker status
 
 - 실행하면 _Docker is running_ 문구가 뜬다.
 
+### Docker login
+- Docker login이 필요하다.
+```
+docker login
+```
+
 ### Docker image
 
 - Docker에서 서비스 운영에 필요한 서버 프로그램, 소스코드 및 라이브러리, 컴파일된 실행 파일을 묶는 형태를 docker image라고 한다.
@@ -128,6 +134,10 @@ docker run -it ubuntu
 
 ```
 docker build -t <docker image name>
+```
+- Docker file의 이름을 변경하려면 -f 옵션을 붙인다.
+```
+docker build -t <docker image name> -f <docker file path> .
 ```
 
 [Dockerfile 작성방법-공식문서 참조](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
