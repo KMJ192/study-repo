@@ -1,13 +1,10 @@
 import FPS from './fps';
 import { draw } from './draw';
+import { worker } from './workerConnector';
 
 import './style.css';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
-
-const worker = new Worker(new URL('./worker.ts', import.meta.url), {
-  type: 'module',
-});
 
 app.innerHTML = `
   <div style="display: flex; flex-direction: column; row-gap: 12px; padding: 16px; box-sizing: border-box;">
@@ -25,7 +22,6 @@ offCanvas.style.border = '1px solid black';
 const mainThreadBlockBtn: HTMLButtonElement = document.querySelector('.btn')!;
 
 const fps = new FPS();
-fps.init();
 const ctx = canvas.getContext('2d')!;
 fps.execute(draw(ctx), 60);
 

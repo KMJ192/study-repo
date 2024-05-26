@@ -2,8 +2,6 @@ import { draw } from './draw';
 import FPS from './fps';
 
 const fps = new FPS();
-fps.init();
-
 const worker = self;
 
 worker.onmessage = (e) => {
